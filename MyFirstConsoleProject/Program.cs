@@ -4,7 +4,7 @@ namespace MyFirstConsoleProject {
 
     class Program {
 
-        static void Main(string[] args) {
+        static void Main(string[] args) { 
             Console.WriteLine("Hello World!");
             int answer = Arithmetic.Add(3, 7);
             Console.WriteLine("3 + 7 = " + answer);
