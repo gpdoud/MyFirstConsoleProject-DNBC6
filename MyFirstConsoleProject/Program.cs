@@ -14,6 +14,10 @@ namespace MyFirstConsoleProject {
             Console.WriteLine("5 * 7 = " + answer);
             answer = Arithmetic.Div(7, 2);
             Console.WriteLine("7 / 2 = " + answer);
+            answer = Arithmetic.Mod(2345, 317);
+            //Console.WriteLine("5 FRED 2 = " + answer);
+            bool TorF = Arithmetic.IsEvenlyDivisible(655, 5);
+            Console.WriteLine($"655 is evenly divisible by 5: {TorF}");
         }
     }
     class Arithmetic {
@@ -28,6 +32,14 @@ namespace MyFirstConsoleProject {
         }
         public static int Div(int a, int b) {
             return a / b;
+        }
+        public static int Mod(int a, int b) {
+            int ans = a % b;
+            Console.WriteLine($"{a} mod {b} = {ans}");
+            return ans;
+        }
+        public static bool IsEvenlyDivisible(int a, int b) {
+            return Mod(a, b) == 0;
         }
     }
 }
